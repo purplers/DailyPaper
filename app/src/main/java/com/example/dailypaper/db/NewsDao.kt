@@ -6,7 +6,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.example.dailypaper.model.New
+import com.example.dailypaper.model.News
 
 /**
  *author：石良昊
@@ -14,13 +14,13 @@ import com.example.dailypaper.model.New
 date : 2023/4/29 17:57
  */
 @Dao
-interface Dao {
-    @Query("select * from ")
-    fun getNewByTitle(title: String?): LiveData<New?>?
+interface NewsDao {
+    @Query("SELECT * FROM news WHERE title = :title")
+    fun getNewByTitle(title: String?): LiveData<News>
 
     @Delete
-    fun deleteNew(new:New)
+    fun deleteNew(news:News?)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertNew(new: New?)
+    fun insertNew(news: News?)
 }

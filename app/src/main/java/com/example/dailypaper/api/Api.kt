@@ -1,6 +1,6 @@
 package com.example.dailypaper.api
 
-import com.example.dailypaper.model.New
+import com.example.dailypaper.model.News
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -11,8 +11,8 @@ import retrofit2.http.Path
 date : 2023/4/29 17:56
  */
 interface Api {
-    @GET("new/{newId}")
-    fun getNew(
-        @Path("newId") newId: String?
-    ): Call<New?>?
+    @GET("news/{newsId}")
+    fun getNews(
+        @Path("newsId") newId: String?
+    ): Call<News?>?
 }

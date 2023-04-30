@@ -9,8 +9,8 @@ import androidx.room.PrimaryKey
  *email：904839562@qq.com
 date : 2023/4/29 17:58
  */
-@Entity(tableName = "New")
-class New (
+@Entity(tableName = "News")
+class News (
         @field:ColumnInfo(
             name = "id",
         )
