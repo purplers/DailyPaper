@@ -20,7 +20,7 @@ abstract class NewsDatabase : RoomDatabase() {
         abstract fun newsDao(): NewsDao?
 
         companion object {
-            private const val DATABASE_NAME = "user_db"
+            private const val DATABASE_NAME = "news_db"
             private var databaseInstance: NewsDatabase? = null
             @Synchronized
             fun getInstance(context: Context): NewsDatabase? {

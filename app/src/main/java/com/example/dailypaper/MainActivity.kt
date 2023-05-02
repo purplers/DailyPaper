@@ -12,6 +12,7 @@ import com.example.dailypaper.viewmodel.NewsViewModel
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         val activityMainBinding =
             DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
         val newsViewModel = ViewModelProvider(this)[NewsViewModel::class.java]
@@ -20,10 +21,6 @@ class MainActivity : AppCompatActivity() {
                 activityMainBinding.news = news
             }
         }
-        val swipeRefreshLayout: SwipeRefreshLayout = activityMainBinding.swipeRefresh
-        swipeRefreshLayout.setOnRefreshListener {
-            newsViewModel.refresh()
-            swipeRefreshLayout.isRefreshing = false
-        }
+
     }
 }
