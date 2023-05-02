@@ -8,6 +8,8 @@ import com.google.gson.annotations.SerializedName
 date : 2023/5/2 13:19
  */
 data class Surface (
+    @SerializedName("time")
+    val time :String,
     @SerializedName("NewsList")
     val newsList:List<News>,
     @SerializedName("TopNewsList")
