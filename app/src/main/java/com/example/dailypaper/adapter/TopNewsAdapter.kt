@@ -9,14 +9,14 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.dailypaper.R
-import com.example.dailypaper.model.TopNews
+import com.example.dailypaper.model.SurfaceNews
 
 /**
  *author：石良昊
  *email：904839562@qq.com
 date : 2023/5/2 17:04
  */
-class TopNewsAdapter(private val fragment: Fragment,private val data: List<TopNews>):RecyclerView.Adapter<TopNewsAdapter.Holder>() {
+class TopNewsAdapter(private val fragment: Fragment,private val data: List<SurfaceNews.TopNews>):RecyclerView.Adapter<TopNewsAdapter.Holder>() {
     class Holder(root:View):RecyclerView.ViewHolder(root){
         val topNewsImage: ImageView = root.findViewById(R.id.topnews_image)
         val topNewsTitle: TextView = root.findViewById(R.id.topnews_title)
@@ -37,7 +37,7 @@ class TopNewsAdapter(private val fragment: Fragment,private val data: List<TopNe
         holder.apply { topNewsTitle.text = itemData.title
             topNewsHint.text = itemData.hint
         }
-        Glide.with(fragment).load(itemData.image).into(holder.topNewsImage)
+        Glide.with(fragment).load(itemData.images).into(holder.topNewsImage)
     }
 
     override fun getItemCount(): Int {

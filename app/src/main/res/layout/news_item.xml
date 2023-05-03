@@ -39,8 +39,8 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerCrop" />
 
-    </LinearLayout>
+    </LinearLayout>555
 
 </com.google.android.material.card.MaterialCardView>

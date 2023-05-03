@@ -3,21 +3,21 @@ package com.example.dailypaper.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
 import com.example.dailypaper.R
-import com.example.dailypaper.model.News
+import com.example.dailypaper.model.SurfaceNews
 
 /**
  *author：石良昊
  *email：904839562@qq.com
 date : 2023/5/2 15:01
  */
-class NewsAdapter(private val fragment:FrameLayout,private val data : List<News>) :
+class NewsAdapter(private val fragment: Fragment, private val data: List<SurfaceNews.News>) :
     RecyclerView.Adapter<NewsAdapter.Holder>() {
     class Holder(root: View) : ViewHolder(root){
         val newsTitle = root.findViewById<TextView>(R.id.title)

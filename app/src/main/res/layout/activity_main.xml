@@ -6,7 +6,7 @@
 
         <variable
             name="news"
-            type="com.example.dailypaper.model.News" />
+            type="com.example.dailypaper.model.SurfaceNews" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
